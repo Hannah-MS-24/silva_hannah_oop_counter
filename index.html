@@ -2,29 +2,153 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1.0, width=device-width">
-    <title>OOP Counter</title>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300%7COpen+Sans" rel="stylesheet" type="text/css">
-    <link href="css/grid.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <script type="module" defer src="js/main.js"></script>
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1.0, width=device-width">
 
+<title>OOP Counter Component</title>
+
+<link href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300%7COpen+Sans" rel="stylesheet">
+<link href="css/grid.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<script type="module" defer src="js/main.js"></script>
+
+</head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Counters</a></li>
-            <li><a href="#">About</a></li>
+
+<!-- Navigation -->
+
+<nav>
+    <div class="grid-con">
+        <ul class="col-span-full">
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#usage">How To Use</a></li>
+            <li><a href="#demo">Live Demo</a></li>
         </ul>
-    </nav>
+    </div>
+</nav>
+
+
+<!-- Header -->
+
+<header class="hero">
+    <div class="grid-con">
+        <h1 class="col-span-full">Reusable Counter Component</h1>
+        <p class="col-span-full">
+            A lightweight JavaScript counter built using Object-Oriented Programming,
+            state-driven UI updates, and modular JavaScript.
+        </p>
+    </div>
+</header>
+
+
+<!-- OVERVIEW SECTION -->
+
+<section id="overview">
 
     <div class="grid-con">
-        <div id="counterCon1" class="counter col-span-full m-col-span-6"></div>
-        <div id="counterCon2" class="counter col-span-full m-col-span-6"></div>
-        <div id="counterCon3" class="counter col-span-full m-col-span-6"></div>
-        <div id="counterCon4" class="counter col-span-full m-col-span-6"></div>
+
+        <h2 class="col-span-full">Overview</h2>
+
+        <p class="col-span-full m-col-span-6">
+            The Counter class is a reusable JavaScript component that creates
+            interactive counters that can increment and decrement values.
+        </p>
+
+        <p class="col-span-full m-col-span-6">
+            It solves the problem of rewriting the same counter logic by providing
+            a self-contained class that manages its own state and updates the DOM
+            automatically when the value changes.
+        </p>
+
     </div>
+
+</section>
+
+
+<!-- HOW TO USE SECTION -->
+
+<section id="usage">
+
+    <div class="grid-con">
+
+        <h2 class="col-span-full">How To Use It</h2>
+
+        <h3 class="col-span-full">1. Create a container in HTML</h3>
+
+<pre class="col-span-full">
+&lt;div id="counter"&gt;&lt;/div&gt;
+</pre>
+
+
+        <h3 class="col-span-full">2. Import the module</h3>
+
+<pre class="col-span-full">
+import Counter from "./js/counter.js";
+</pre>
+
+
+        <h3 class="col-span-full">3. Instantiate the counter</h3>
+
+<pre class="col-span-full">
+const counter = new Counter("#counter", 10);
+counter.mount();
+</pre>
+
+
+        <h3 class="col-span-full">Parameters</h3>
+
+        <ul class="col-span-full m-col-span-6">
+            <li><strong>container</strong> – The selector for the HTML container</li>
+            <li><strong>initialValue</strong> – The starting value for the counter</li>
+        </ul>
+
+    </div>
+
+</section>
+
+
+<!-- LIVE DEMO -->
+
+<section id="demo">
+
+    <div class="grid-con">
+
+        <h2 class="col-span-full">Live Demo</h2>
+
+        <p class="col-span-full">
+            Below are multiple working counters with different starting values.
+        </p>
+
+        <!-- Counters -->
+
+        <div id="counterCon1" class="counter col-span-full m-col-span-6 l-col-span-3"></div>
+
+        <div id="counterCon2" class="counter col-span-full m-col-span-6 l-col-span-3"></div>
+
+        <div id="counterCon3" class="counter col-span-full m-col-span-6 l-col-span-3"></div>
+
+        <div id="counterCon4" class="counter col-span-full m-col-span-6 l-col-span-3"></div>
+
+    </div>
+
+</section>
+
+
+<!-- Footer -->
+
+<footer>
+
+    <div class="grid-con">
+
+        <p class="col-span-full">
+            Counter Component Documentation — Built using JavaScript OOP and Modules.
+        </p>
+
+    </div>
+
+</footer>
+
+
 </body>
+
 </html>
