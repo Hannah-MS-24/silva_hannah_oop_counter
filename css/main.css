@@ -1,1 +1,308 @@
+<<<<<<< Updated upstream
 /*# sourceMappingURL=main.css.map */
+=======
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  color: #2d2d2d;
+  line-height: 1.7;
+  background-color: #f7f9fc;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Open Sans Condensed", Arial, sans-serif;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #2d2d2d;
+}
+
+a {
+  color: #3a9fd8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: #ff6b9d;
+}
+
+pre {
+  background-color: #1a1e2e;
+  color: #c2e9ff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #6fc8ff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+ul li {
+  margin-bottom: 0.6rem;
+  color: #2d2d2d;
+}
+
+strong {
+  color: #3a9fd8;
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 1px solid #e0e8f0;
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.counter::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #6fc8ff, #ff6b9d);
+}
+.counter:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.18);
+}
+.counter .counter-value {
+  font-family: "Open Sans Condensed", Arial, sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #1a1e2e;
+  margin-bottom: 1.5rem;
+  min-width: 120px;
+  text-align: center;
+  background: linear-gradient(135deg, #3a9fd8, #ff6b9d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.counter .counter-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.counter .counter-controls button {
+  background: linear-gradient(135deg, #6fc8ff, #3a9fd8);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  width: 48px;
+  height: 48px;
+  font-size: 1.5rem;
+  font-family: "Open Sans Condensed", Arial, sans-serif;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.counter .counter-controls button:hover {
+  background: linear-gradient(135deg, #3a9fd8, #ff6b9d);
+  transform: scale(1.1);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+.counter .counter-controls button:active {
+  transform: scale(0.95);
+  box-shadow: none;
+}
+
+nav {
+  background-color: #1a1e2e;
+  height: 64px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid #232840;
+}
+nav .grid-con {
+  height: 100%;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  gap: 2.5rem;
+}
+nav ul li a {
+  color: #c2e9ff;
+  font-family: "Open Sans Condensed", Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+nav ul li a:hover {
+  color: #ffffff;
+  border-bottom-color: #6fc8ff;
+}
+
+.hero {
+  background: linear-gradient(135deg, #1a1e2e 0%, #232840 60%, #2d3352 100%);
+  color: #ffffff;
+  padding: 120px 0 100px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(111, 200, 255, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 107, 157, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero h1 {
+  font-size: 3.5rem;
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+  letter-spacing: 1px;
+}
+.hero h1 span {
+  color: #6fc8ff;
+}
+.hero p {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 620px;
+  line-height: 1.8;
+}
+
+section {
+  padding: 80px 0;
+}
+section h2 {
+  font-size: 2.2rem;
+  color: #1a1e2e;
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+}
+section h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: linear-gradient(90deg, #6fc8ff, #ff6b9d);
+  border-radius: 2px;
+  margin-top: 8px;
+  margin-bottom: 1.5rem;
+}
+section#overview {
+  background-color: #ffffff;
+}
+section#overview p {
+  background-color: #f7f9fc;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #6fc8ff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+section#usage {
+  background-color: #f7f9fc;
+}
+section#usage h3 {
+  color: #1a1e2e;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+section#usage h3::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #6fc8ff;
+  border-radius: 50%;
+}
+section#usage ul {
+  background-color: #ffffff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  list-style: none;
+  padding-left: 1.5rem;
+}
+section#usage ul li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #e0e8f0;
+}
+section#usage ul li:last-child {
+  border-bottom: none;
+}
+section#demo {
+  background: linear-gradient(180deg, #f7f9fc 0%, #ffffff 100%);
+}
+section#demo p {
+  color: #888;
+  margin-bottom: 2.5rem;
+}
+
+footer {
+  background-color: #1a1e2e;
+  color: #ffffff;
+  padding: 40px 0;
+  text-align: center;
+  border-top: 1px solid #232840;
+}
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.5px;
+}/*# sourceMappingURL=main.css.map */
+>>>>>>> Stashed changes

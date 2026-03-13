@@ -3,8 +3,8 @@
 body {
     font-family: abstracts.$body-font;
     color: abstracts.$text-color;
-    line-height: 1.6;
-    background-color: whitesmoke;
+    line-height: 1.7;
+    background-color: abstracts.$light-gray;
 }
 
 h1, h2, h3, h4, h5 {
@@ -13,38 +13,54 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 1rem;
 }
 
-h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
+h1 { font-size: 3rem; }
+h2 { font-size: 2.2rem; }
 h3 { font-size: 1.4rem; }
 
 p {
     margin-bottom: 1rem;
     font-size: 1rem;
+    color: abstracts.$text-color;
 }
 
 a {
-    color: abstracts.$primary-color;
+    color: abstracts.$primary-dark;
     text-decoration: none;
+    transition: color 0.2s ease;
 
     &:hover {
-        text-decoration: underline;
+        color: abstracts.$accent-color;
     }
 }
 
 pre {
+<<<<<<< Updated upstream
     background-color: white;
     color: $white;
     padding: 1.2rem 1.5rem;
     border-radius: 6px;
+=======
+    background-color: abstracts.$dark-bg;
+    color: abstracts.$primary-light;
+    padding: 1.5rem 2rem;
+    border-radius: abstracts.$radius-md;
+>>>>>>> Stashed changes
     font-size: 0.9rem;
     overflow-x: auto;
     margin-bottom: 1.5rem;
+    border-left: 4px solid abstracts.$primary-color;
+    box-shadow: abstracts.$shadow-md;
 }
 
 ul {
     padding-left: 1.5rem;
 
     li {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.6rem;
+        color: abstracts.$text-color;
     }
+}
+
+strong {
+    color: abstracts.$primary-dark;
 }
