@@ -2,153 +2,214 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>OOP Counter Component</title>
-
-<link href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300%7COpen+Sans" rel="stylesheet">
-<link href="css/grid.css" rel="stylesheet">
-<link href="css/main.css" rel="stylesheet">
-<script type="module" defer src="js/main.js"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Component — JS OOP Documentation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script type="module" defer src="js/main.js"></script>
 </head>
+
 <body>
 
-<!-- Navigation -->
-
-<nav>
-    <div class="grid-con">
-        <ul class="col-span-full">
-            <li><a href="#overview">Overview</a></li>
-            <li><a href="#usage">How To Use</a></li>
-            <li><a href="#demo">Live Demo</a></li>
-        </ul>
-    </div>
-</nav>
-
-
-<!-- Header -->
-
-<header class="hero">
-    <div class="grid-con">
-        <h1 class="col-span-full">Reusable Counter Component</h1>
-        <p class="col-span-full">
-            A lightweight JavaScript counter built using Object-Oriented Programming,
-            state-driven UI updates, and modular JavaScript.
-        </p>
-    </div>
-</header>
+    <!-- Navigation -->
+    <nav>
+        <div class="grid-con">
+            <div class="nav-brand col-span-2">
+                <span class="nav-logo">{ }</span> CounterJS
+            </div>
+            <ul class="col-span-2 m-col-span-10">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#usage">How To Use</a></li>
+                <li><a href="#stepcounter">StepCounter</a></li>
+                <li><a href="#demo">Live Demo</a></li>
+            </ul>
+        </div>
+    </nav>
 
 
-<!-- OVERVIEW SECTION -->
-
-<section id="overview">
-
-    <div class="grid-con">
-
-        <h2 class="col-span-full">Overview</h2>
-
-        <p class="col-span-full m-col-span-6">
-            The Counter class is a reusable JavaScript component that creates
-            interactive counters that can increment and decrement values.
-        </p>
-
-        <p class="col-span-full m-col-span-6">
-            It solves the problem of rewriting the same counter logic by providing
-            a self-contained class that manages its own state and updates the DOM
-            automatically when the value changes.
-        </p>
-
-    </div>
-
-</section>
+    <!-- Hero -->
+    <header class="hero">
+        <div class="grid-con">
+            <div class="col-span-full">
+                <p class="hero-tag">JavaScript OOP Component</p>
+                <h1>Reusable Counter <span>Component</span></h1>
+                <p class="hero-sub">
+                    A lightweight, modular counter built with JavaScript OOP —
+                    featuring encapsulation, state-driven UI, and inheritance via StepCounter.
+                </p>
+            </div>
+        </div>
+    </header>
 
 
-<!-- HOW TO USE SECTION -->
+    <!-- Overview -->
+    <section id="overview">
+        <div class="grid-con">
 
-<section id="usage">
+            <h2 class="col-span-full">Overview</h2>
 
-    <div class="grid-con">
+            <div class="col-span-full m-col-span-6">
+                <div class="info-card">
+                    <h3>What it does</h3>
+                    <p>
+                        The <strong>Counter</strong> class is a reusable JavaScript component
+                        that creates interactive counters with increment, decrement, and reset
+                        functionality. It manages its own state and updates the DOM automatically.
+                    </p>
+                </div>
+            </div>
 
-        <h2 class="col-span-full">How To Use It</h2>
+            <div class="col-span-full m-col-span-6">
+                <div class="info-card">
+                    <h3>What problem it solves</h3>
+                    <p>
+                        Instead of rewriting counter logic for every use case, this class provides
+                        a self-contained component. Just pass a selector and an optional starting
+                        value — the counter handles everything else.
+                    </p>
+                </div>
+            </div>
 
-        <h3 class="col-span-full">1. Create a container in HTML</h3>
-
-<pre class="col-span-full">
-&lt;div id="counter"&gt;&lt;/div&gt;
-</pre>
-
-
-        <h3 class="col-span-full">2. Import the module</h3>
-
-<pre class="col-span-full">
-import Counter from "./js/counter.js";
-</pre>
-
-
-        <h3 class="col-span-full">3. Instantiate the counter</h3>
-
-<pre class="col-span-full">
-const counter = new Counter("#counter", 10);
-counter.mount();
-</pre>
-
-
-        <h3 class="col-span-full">Parameters</h3>
-
-        <ul class="col-span-full m-col-span-6">
-            <li><strong>container</strong> – The selector for the HTML container</li>
-            <li><strong>initialValue</strong> – The starting value for the counter</li>
-        </ul>
-
-    </div>
-
-</section>
+        </div>
+    </section>
 
 
-<!-- LIVE DEMO -->
+    <!-- How To Use -->
+    <section id="usage">
+        <div class="grid-con">
 
-<section id="demo">
+            <h2 class="col-span-full">How To Use It</h2>
 
-    <div class="grid-con">
+            <div class="col-span-full">
+                <h3>1. Create a container in your HTML</h3>
+                <pre><code>&lt;div id="my-counter"&gt;&lt;/div&gt;</code></pre>
+            </div>
 
-        <h2 class="col-span-full">Live Demo</h2>
+            <div class="col-span-full">
+                <h3>2. Import the Counter class</h3>
+                <pre><code>import { Counter } from "./js/counter.js";</code></pre>
+            </div>
 
-        <p class="col-span-full">
-            Below are multiple working counters with different starting values.
-        </p>
+            <div class="col-span-full">
+                <h3>3. Instantiate the counter</h3>
+                <pre><code>const counter = new Counter("#my-counter", 10);
+// selector: required — the container element
+// initialValue: optional — defaults to 0</code></pre>
+            </div>
 
-        <!-- Counters -->
+            <div class="col-span-full m-col-span-6">
+                <h3>Parameters</h3>
+                <ul>
+                    <li><strong>selector</strong> — CSS selector for the HTML container</li>
+                    <li><strong>initialValue</strong> — Starting value for the counter (default: <code>0</code>)</li>
+                </ul>
+            </div>
 
-        <div id="counterCon1" class="counter col-span-full m-col-span-6 l-col-span-3"></div>
+            <div class="col-span-full m-col-span-6">
+                <h3>Behaviour</h3>
+                <ul>
+                    <li>Counter <strong>never goes below 0</strong></li>
+                    <li>Decrement and Reset buttons become <strong>visually inactive</strong> at 0</li>
+                    <li>Reset logs <code>Reset Activated!!!</code> to the console</li>
+                    <li>Multiple counters can run independently on the same page</li>
+                </ul>
+            </div>
 
-        <div id="counterCon2" class="counter col-span-full m-col-span-6 l-col-span-3"></div>
-
-        <div id="counterCon3" class="counter col-span-full m-col-span-6 l-col-span-3"></div>
-
-        <div id="counterCon4" class="counter col-span-full m-col-span-6 l-col-span-3"></div>
-
-    </div>
-
-</section>
+        </div>
+    </section>
 
 
-<!-- Footer -->
+    <!-- StepCounter -->
+    <section id="stepcounter">
+        <div class="grid-con">
 
-<footer>
+            <h2 class="col-span-full">StepCounter</h2>
 
-    <div class="grid-con">
+            <p class="col-span-full">
+                <strong>StepCounter</strong> extends <strong>Counter</strong> and demonstrates
+                inheritance and polymorphism. It accepts a third parameter — <code>step</code> —
+                and overrides <code>increment()</code> and <code>decrement()</code> to move by
+                that amount instead of 1.
+            </p>
 
-        <p class="col-span-full">
-            Counter Component Documentation — Built using JavaScript OOP and Modules.
-        </p>
+            <div class="col-span-full">
+                <h3>Import StepCounter</h3>
+                <pre><code>import { Counter, StepCounter } from "./js/counter.js";</code></pre>
+            </div>
 
-    </div>
+            <div class="col-span-full">
+                <h3>Instantiate with a step value</h3>
+                <pre><code>const stepCounter = new StepCounter("#my-step-counter", 0, 5);
+// selector: required
+// initialValue: optional — defaults to 0
+// step: optional — defaults to 1</code></pre>
+            </div>
 
-</footer>
+            <div class="col-span-full m-col-span-6">
+                <h3>Parameters</h3>
+                <ul>
+                    <li><strong>selector</strong> — CSS selector for the HTML container</li>
+                    <li><strong>initialValue</strong> — Starting value (default: <code>0</code>)</li>
+                    <li><strong>step</strong> — Amount to increment/decrement by (default: <code>1</code>)</li>
+                </ul>
+            </div>
+
+            <div class="col-span-full m-col-span-6">
+                <h3>OOP Concepts Used</h3>
+                <ul>
+                    <li>Uses <code>extends</code> to inherit from Counter</li>
+                    <li>Uses <code>super()</code> to call the parent constructor</li>
+                    <li>Overrides <code>increment()</code> and <code>decrement()</code></li>
+                    <li>Overrides <code>update()</code> to display the step value</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Live Demo -->
+    <section id="demo">
+        <div class="grid-con">
+
+            <h2 class="col-span-full">Live Demo</h2>
+
+            <p class="col-span-full demo-intro">
+                Below are six working counters — three standard and three StepCounters
+                with different starting values and step sizes.
+            </p>
+
+            <div class="col-span-full">
+                <p class="demo-group-label">Standard Counter — increments by 1</p>
+            </div>
+
+            <div id="counter-container1" class="counter col-span-full m-col-span-4"></div>
+            <div id="counter-container2" class="counter col-span-full m-col-span-4"></div>
+            <div id="counter-container3" class="counter col-span-full m-col-span-4"></div>
+
+            <div class="col-span-full">
+                <p class="demo-group-label">StepCounter — increments by custom step</p>
+            </div>
+
+            <div id="counter-container4" class="counter col-span-full m-col-span-4"></div>
+            <div id="counter-container5" class="counter col-span-full m-col-span-4"></div>
+            <div id="counter-container6" class="counter col-span-full m-col-span-4"></div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="grid-con">
+            <p class="col-span-full">
+                Counter Component — Built with JavaScript OOP &amp; Modules.
+            </p>
+        </div>
+    </footer>
 
 
 </body>
-
 </html>
