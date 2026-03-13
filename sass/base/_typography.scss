@@ -1,14 +1,14 @@
-@use '../abstracts' ;
+@use '../abstracts' as abstracts;
 
 body {
-    font-family: $body-font;
-    color: $text-color;
+    font-family: abstracts.$body-font;
+    color: abstracts.$text-color;
     line-height: 1.6;
-    background-color: $white;
+    background-color: whitesmoke;
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: $heading-font;
+    font-family: abstracts.$heading-font;
     line-height: 1.2;
     margin-bottom: 1rem;
 }
@@ -23,7 +23,7 @@ p {
 }
 
 a {
-    color: $primary-color;
+    color: abstracts.$primary-color;
     text-decoration: none;
 
     &:hover {
@@ -32,7 +32,7 @@ a {
 }
 
 pre {
-    background-color: $dark-bg;
+    background-color: white;
     color: $white;
     padding: 1.2rem 1.5rem;
     border-radius: 6px;
