@@ -1,3 +1,84 @@
+@use '../abstracts' as abstracts;
 
-@use '../abstracts';
+.counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: abstracts.$white;
+    border: 1px solid abstracts.$border-color;
+    border-radius: abstracts.$radius-lg;
+    padding: 2.5rem 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: abstracts.$shadow-sm;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
 
+    // Top accent bar
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, abstracts.$primary-color, abstracts.$accent-color);
+    }
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: abstracts.$shadow-lg;
+    }
+
+    // Counter display value
+    .counter-value {
+        font-family: abstracts.$heading-font;
+        font-size: 4rem;
+        font-weight: 700;
+        color: abstracts.$dark-bg;
+        margin-bottom: 1.5rem;
+        min-width: 120px;
+        text-align: center;
+        background: linear-gradient(135deg, abstracts.$primary-dark, abstracts.$accent-color);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    // Buttons
+    .counter-controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        button {
+            background: linear-gradient(135deg, abstracts.$primary-color, abstracts.$primary-dark);
+            color: abstracts.$white;
+            border: none;
+            border-radius: abstracts.$radius-md;
+            width: 48px;
+            height: 48px;
+            font-size: 1.5rem;
+            font-family: abstracts.$heading-font;
+            cursor: pointer;
+            box-shadow: abstracts.$shadow-sm;
+            transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                background: linear-gradient(135deg, abstracts.$primary-dark, abstracts.$accent-color);
+                transform: scale(1.1);
+                box-shadow: abstracts.$shadow-md;
+            }
+
+            &:active {
+                transform: scale(0.95);
+                box-shadow: none;
+            }
+        }
+    }
+}
