@@ -1,4 +1,4 @@
-import { Counter, StepCounter } from './counter.js';
+import { Counter, StepCounter } from './modules/counter.js';
 
 // Standard counters with different initial values
 const counter1 = new Counter('#counter-container1', 0);
